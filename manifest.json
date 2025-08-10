@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Side Panel Reader",
+  "version": "0.1.0",
+  "description": "Privacy-first read-it-later tool in Chrome side panel.",
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "scripting",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel/index.html"
+  },
+  "action": {
+    "default_title": "Save to Read Later"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/contentScript.ts"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
