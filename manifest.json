@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Side Panel Reader",
+  "version": "0.1.0",
+  "description": "Save pages and read them later in the side panel.",
+  "permissions": ["sidePanel", "storage", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel/index.html"
+  },
+  "action": {
+    "default_title": "Save to Read Later"
+  }
+}
+
