@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+uuxkpz-codex/create-chrome-extension-for-read-it-later-sidebar
+    "test": "node --experimental-strip-types --test"
+  }
+}
     "dev": "vite",
     "build": "vite build",
     "test": "vitest run"
@@ -25,3 +29,4 @@
     "@types/chrome": "^0.0.246"
   }
 }
+main

@@ -2,6 +2,11 @@
   "manifest_version": 3,
   "name": "Side Panel Reader",
   "version": "0.1.0",
+uuxkpz-codex/create-chrome-extension-for-read-it-later-sidebar
+  "description": "Save pages and read them later in the side panel.",
+  "permissions": ["sidePanel", "storage", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "src/background.js",
   "description": "Privacy-first read-it-later tool in Chrome side panel.",
   "permissions": [
     "sidePanel",
@@ -14,6 +19,8 @@
   ],
   "background": {
     "service_worker": "src/background.ts",
+    
+   main
     "type": "module"
   },
   "side_panel": {
@@ -21,6 +28,10 @@
   },
   "action": {
     "default_title": "Save to Read Later"
+uuxkpz-codex/create-chrome-extension-for-read-it-later-sidebar
+  }
+}
+
   },
   "content_scripts": [
     {
@@ -34,3 +45,4 @@
     }
   ]
 }
+main
